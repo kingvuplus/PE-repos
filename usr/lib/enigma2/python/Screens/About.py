@@ -1,5 +1,3 @@
-# 2015.07.08 03:58:58 CET
-#Embedded file name: /usr/lib/enigma2/python/Screens/About.py
 from Screen import Screen
 from Components.ActionMap import ActionMap
 from Components.Sources.StaticText import StaticText
@@ -11,7 +9,7 @@ from Components.Button import Button
 from os import path
 from Tools.StbHardware import getFPVersion
 from enigma import eTimer
-from boxbranding import getBoxType, getImageVersionString
+from boxbranding import getBoxType, getImageVersion
 
 class About(Screen):
 
@@ -20,8 +18,8 @@ class About(Screen):
         AboutText = _('STB : ') + getBoxType() + '\n'
         AboutText += _('Brand : ') + about.getBrandString() + '\n'
         AboutText += _('Image : Persian Empire') + '\n'
-        AboutText += _('Version : ') + getImageVersionString() + '\n'
-        AboutText += _('Kernel : ') + about.getKernelVersionString() + ' PE Mode\n'
+        AboutText += _('Version : ') + getImageVersion() + '\n'
+        AboutText += _('Kernel : ') + about.getKernelVersionString() + ' PE Mode REDOUANE\n'
         EnigmaVersion = 'Enigma2 : ' + about.getEnigmaVersionString()
         self['EnigmaVersion'] = StaticText(EnigmaVersion)
         AboutText += EnigmaVersion + ' PE Mode REDOUANE\n'
